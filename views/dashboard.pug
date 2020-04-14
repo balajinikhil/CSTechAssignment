@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title DASHBOARD
+        link(rel="stylesheet", href="/style.css")
+    body
+    
+    .query
+        input(type="text" class='nme' placeholder='Name')
+        input(type="text" class='email' placeholder='Email')
+        button(class="btn") Search
+
+
+    each user in users
+
+        .user
+            h3 Name : #{user.name}
+            h3 Email : #{user.email}
+            h3 Salary : #{user.salary}
+            h3 Designation : #{user.designation}
+            a(href=`/form-delete/${user.slug}`) Delete
+            a(href=`/form-edit/${user.slug}`) Edit
+
+
+
+    script(src="/script.js")

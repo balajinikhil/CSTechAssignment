@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title EDIT FORM
+        link(rel="stylesheet", href="/style.css")
+    body
+        <form action="/edit" method="POST">
+            h4 name
+                input(type="text" value = `${edit.name}` name='name')
+            h4 email
+                input(type="text" value = `${edit.email}` name='email')
+            h4 salary 
+                input(type="text" value = `${edit.salary}` name='salary')
+            h4 slug 
+                input(type="text" value = `${edit.slug}` name='slug' readOnly)
+            h4 designation
+                <select class='sel' name='designation'>
+                        option(value=`${edit.designation}`) #{edit.designation}
+                        each role in des
+                            option(value=`${role.des}`) #{role.des}
+                </select>
+                button(type='submit') Submit
+        </form>
+        
+        

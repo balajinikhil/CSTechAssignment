@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+.user {
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid black;
+}
